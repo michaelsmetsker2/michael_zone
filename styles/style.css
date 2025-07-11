@@ -1,0 +1,45 @@
+/* google api font */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+* { /* for debugging 
+    border: 1px solid red;
+    */
+}
+
+#mainContentWrapper {
+     margin-left: 20%;
+  background-image: url('/images/cave-background.png');
+  background-repeat: repeat;        /* Tiling both horizontally & vertically */
+  background-position: top left;    /* Start at top-left of main area */
+  background-attachment: scroll;    /* Default, but makes it clear: scrolls with page */
+  
+}
+
+body {
+    color: white;
+    font-family: 'Comic Sans MS', 'Comic Sans', 'Comic Neue', 'Chalkboard', cursive;
+    text-align: center;
+    
+}
+
+/* redets defualt browser padding as the background would have a white border around it otherwise */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+aside {
+    position: fixed;
+    width: 20%; /* Set the width of the sidebar */
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black */
+    padding-top: 20px;
+    
+    font-size: small;
+}
+
+h1 {
+    color: red;
+}

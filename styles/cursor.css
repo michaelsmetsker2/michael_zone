@@ -1,0 +1,72 @@
+/* Default arrow cursor */
+body, html {
+  cursor: url('cursors/M9 Ready (normal select).cur'), auto;
+}
+
+/* Hand cursor (links, buttons) */
+a, button {
+  cursor: url('cursors/M9 Fire (link select).ani'), pointer;
+}
+
+/* Text input cursor (IBeam) */
+input[type="text"], input[type="search"], input[type="email"], 
+input[type="password"], textarea, [contenteditable="true"] {
+  cursor: url('cursors/M9 Type (text select 2).ani'), text;
+}
+
+/* Busy/Wait cursor */
+.loading, .busy, .wait {
+  cursor: url('cursors/M9 Reload (busy).ani'), wait;
+}
+
+/* Crosshair cursor */
+.crosshair {
+  cursor: url('cursors/M9 Aim (Precision).cur'), crosshair;
+}
+
+/* Move cursor */
+.moveable, .draggable {
+  cursor: url('cursors/Hand (move).cur'), move;
+}
+
+/* Resize cursors */
+.resize-nwse {
+  cursor: url('cursors/M9 Diagonal Resize LEFT.cur'), nwse-resize;
+}
+
+.resize-nesw {
+  cursor: url('cursors/M9 Diagonal Resize RIGHT.cur'), nesw-resize;
+}
+
+.resize-we {
+  cursor: url('cursors/M9 Horizontal Resize.cur'), ew-resize;
+}
+
+.resize-ns {
+  cursor: url('cursors/M9 Vertical Resize.cur'), ns-resize;
+}
+
+/* Not allowed / No cursor */
+.disabled, .no-drop {
+  cursor: url('cursors/M9 Empty (unavailable).cur'), not-allowed;
+}
+
+/* Help cursor */
+.help {
+  cursor: url('cursors/M9 Target in Question (help select).cur'), help;
+}
+
+/* Pen/NWPen cursor (e.g. for drawing apps or handwriting) */
+.pen, .drawing {
+  cursor: url('cursors/Laser (handwriting).ani'), crosshair;
+}
+
+/* UpArrow cursor (less common) */
+.up-arrow {
+  cursor: url('cursors/M9 Alternate Select.cur'), default;
+}
+
+/* AppStarting cursor (usually for loading apps) */
+.app-starting {
+  cursor: url('cursors/M9 Cock-reload (working in background).ani'), wait;
+}

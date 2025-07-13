@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Drawin'</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <h1>draw</h1>
+
+  <img id="keymap" src="images/keymap.png">
+  <canvas id="drawingCanvas" width="1000px" height="280" ></canvas>
+
+  <div class="toolbar">
+    <input type="color" id="colorPicker" value="#000000">
+    <input type="range" min="20" max="100" id="sizeSlider">
+    <button onclick="clearCanvas()">Clear</button>
+    <button onclick="submitColors()">submit</button>
+    <button onclick="toggleGuide()">toggle guide</button>
+    <input type="radio" name="color" id="frequency" onclick="setColorMode(0)" checked>
+    <label for="frequency">frequency</label>
+    <input type="radio" name="color" id="average" onclick="setColorMode(1)">
+    <label for="average">average</label>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

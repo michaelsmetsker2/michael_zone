@@ -16,14 +16,39 @@ body {
     background-image: url('/images/cave-background.png');
     background-repeat: repeat;
 
+<<<<<<< HEAD
     color: white;
+=======
+    font-size: 1.5rem;
+    color: yellow;
+>>>>>>> b414763 (more css)
     font-family: 'Comic Sans MS', 'Comic Sans', 'Comic Neue', 'Chalkboard', cursive;
     text-align: center;
     
 }
 
+/* global formatting*/
+html body, p {
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    width: 80%;
+}
+
+li {
+    text-align: left;
+}
+h1, h2{
+    white-space: nowrap;
+    margin-bottom: -.22em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(178, 12, 12);
+}
+
 /* makes the left of the background image align with the sidebar*/
-#mainContentWrapper {
+#main-content-wrapper {
     margin-left: 20%;
     background-image: url('/images/cave-background.png');
     background-repeat: round;        /* Distorts background based on zoom */
@@ -41,24 +66,36 @@ aside {
     font-size: small;
 }
 
-html body, p{
-    margin: 0;
-    padding: 0;
-}
-
-/* moving banner at the top of the page */
+/*
+    my attempt to recreate the marquee element due to it being defunct
+    Speed is based off of browser width and i'm to lazy to fix that
+*/
 #banner {
-    max-width: 90%;
-}
-#bannerBox {
     display: flex;
 }
-#bannerBox img {
-  height: 1em;         /* match the font size height */
-  flex-shrink: 0;      /* prevent images from shrinking */
-  vertical-align: middle;
+/* what actually moves */
+#banner-box { 
+    display: flex;
+    align-items: center;
+    animation: bounce 5s linear infinite alternate;
+}
+#banner-box img {
+    height: 1em;
+}
+#banner-box p {
+    white-space: nowrap;
+}
+@keyframes bounce {
+    0% {
+        transform: translateX(0);
+    }
+        100% {
+        transform: translateX(calc(80vw - 100%)); 
+        /* Moves left so the content bounces within the 80vw container */
+    }
 }
 
+<<<<<<< HEAD
 #skulls {
     display: flex;
     justify-content: space-between; /* or use gap if you prefer */
@@ -66,13 +103,75 @@ html body, p{
 }
 
 #titleContainer {
+=======
+/* generic flexbox for multiple images */
+.image-container {
+>>>>>>> b414763 (more css)
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
     height: auto;
 }
 
+<<<<<<< HEAD
 h1 {
     color: red;
+=======
+.image-container img {
+    height: auto;
+    flex-shrink: 1;         /* allow shrinking */
+    width: auto;            /* keep natural width unless shrinking */
+    min-width: 0;           /* fixes shrinkin in some browsers (aka firefox) */
+    object-fit: contain;
+}
+
+/* Text with skulls and dripping blood */
+
+#blood-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#blood-box img {
+    width: 100%;
+    max-width:75%;
+}
+
+/* about me table */
+#table-wrapper {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#about-me-table {
+    margin: auto;
+    border: 5px solid rgb(195, 184, 184);
+}
+#about-me-table td {
+    border: 2px solid rgb(156, 147, 147);
+}
+
+/* spinning skull bullet points on about me list*/
+.skull-list {
+    list-style: none; /* remove default bullets */
+}
+.skull-list li {
+    margin-bottom: .4em;
+    position: relative;
+    padding-left: 32px; /* space for the skull image */
+}
+.skull-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px; /* adjust as needed to center vertically */
+    width: 24px; /* control the skull size */
+    height: 24px;
+    background-image: url('/images/spinning-skull.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.alien {
+    vertical-align: middle;
+    height: 3em;
+>>>>>>> b414763 (more css)
 }

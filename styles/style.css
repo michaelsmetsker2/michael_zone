@@ -1,9 +1,14 @@
 /* google api font */
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
 
-* { /* for debugging 
-    border: 1px solid red;
-    */
+:root {
+    /* not to extatic about some of the colors, may find a better pallette, fits then vibe though*/
+  --header-colos: #b20c0c;
+  --alt-header-color: #d87b11;
+  --text-color: #ffff00;
+  --accent-color: #a19a9a;
+  --link-color: #800080;
+  --background-colof: #0f0f0f;
 }
 
 body {
@@ -16,24 +21,26 @@ body {
     background-image: url('/images/cave-background.png');
     background-repeat: repeat;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    color: white;
-=======
     font-size: 1.5rem;
-    color: yellow;
->>>>>>> b414763 (more css)
-=======
-    font-size: 1.5rem;
-    color: yellow;
->>>>>>> b41476311b954c52008938d7de575ca27e2f6ef0
+    color: var(--text-color);
     font-family: 'Comic Sans MS', 'Comic Sans', 'Comic Neue', 'Chalkboard', cursive;
     text-align: center;
     
+    margin: 0;
+    padding: 0;
+
+    /* debugging 
+    border: 1px solid red;
+    */
+
+}
+a:hover {
+    color: var(--link-color);
 }
 
+
 /* global formatting*/
-html body, p {
+p {
     margin: 0;
     padding: 0;
 }
@@ -49,14 +56,14 @@ h1, h2{
     white-space: nowrap;
     margin-bottom: -.22em;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(178, 12, 12);
+    color: var(--header-colos);
 }
-
-/* makes the left of the background image align with the sidebar*/
-#main-content-wrapper {
-    margin-left: 20%;
-    background-image: url('/images/cave-background.png');
-    background-repeat: round;        /* Distorts background based on zoom */
+h3 {
+    white-space: nowrap;
+    margin-bottom: 0em;
+    margin-top: 0em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--alt-header-color);
 }
 
 aside {
@@ -68,13 +75,16 @@ aside {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
-<<<<<<< HEAD
-
-=======
+    background-color: var(--background-colof);
     overflow-y: auto;
->>>>>>> b41476311b954c52008938d7de575ca27e2f6ef0
     font-size: small;
+}
+
+/* makes the left of the background image align with the sidebar*/
+#main-content-wrapper {
+    margin-left: 20%;
+    background-image: url('/images/cave-background.png');
+    background-repeat: round;        /* Distorts background based on zoom */
 }
 
 /*
@@ -106,36 +116,14 @@ aside {
     }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-#skulls {
-    display: flex;
-    justify-content: space-between; /* or use gap if you prefer */
-    gap: 90px; /* or whatever spacing you want */
-}
-
-#titleContainer {
-=======
 /* generic flexbox for multiple images */
 .image-container {
->>>>>>> b414763 (more css)
-=======
-/* generic flexbox for multiple images */
-.image-container {
->>>>>>> b41476311b954c52008938d7de575ca27e2f6ef0
     display: flex;
     align-items: center;
     justify-content: center;
     height: auto;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-h1 {
-    color: red;
-=======
-=======
->>>>>>> b41476311b954c52008938d7de575ca27e2f6ef0
 .image-container img {
     height: auto;
     flex-shrink: 1;         /* allow shrinking */
@@ -163,10 +151,10 @@ h1 {
 }
 #about-me-table {
     margin: auto;
-    border: 5px solid rgb(195, 184, 184);
+    border: 5px solid var(--accent-color);
 }
 #about-me-table td {
-    border: 2px solid rgb(156, 147, 147);
+    border: 2px solid var(--accent-color);
 }
 
 /* spinning skull bullet points on about me list*/
@@ -192,8 +180,5 @@ h1 {
 .alien {
     vertical-align: middle;
     height: 3em;
-<<<<<<< HEAD
->>>>>>> b414763 (more css)
-=======
->>>>>>> b41476311b954c52008938d7de575ca27e2f6ef0
 }
+

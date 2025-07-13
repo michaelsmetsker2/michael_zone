@@ -13,48 +13,88 @@
 </head>
 <body>
 	
-	<!-- wrapper is for backgrouind alignment -->
-	<div id="mainContentWrapper">
+	<!-- wrapper is for background alignment -->
+	<div id="main-content-wrapper">
+		
+		<div id="banner">
+			<div id="banner-box">
+				<img src="images/new.gif" alt="NEW!">
+				<p><small>Welcome to the world wide web's most awesome Michael content!</small></p>
+				<img src="images/hot.gif" alt="HOT">
+			</div>
+		</div>
 		
 		<header>
-			<marquee id="banner" behavior="alternate" scrollamount=5>
-				<div id="bannerBox">
-					<img src="images/new.gif" alt="NEW!">
-					<p>Welcome to the world wide web's most awesome Michael content!</p>
-					<img src="images/hot.gif" alt="HOT">
-				</div>
-			</marquee>
 			
-			<div class="imageContainer">	
+			<div class="image-container">	
 				<img src="images/lightning.gif" alt="Cool Lightning">	
 				<img src="images/the-michael-zone.png " alt="The Michael Zone">
 				<img src="images/lightning.gif" alt="Cool Lightning">	
 			</div>
 				
-			<div class="imageContainer">
+			<div class="image-container">
 				<img src="images/left-skull.gif" alt="Skull opening it's mouth">
-				<h1>The Michael Zone</h1>
+
+				<!-- on high zoom levels img and h1 get misaligned -->
+				<div id=blood-box>
+					<h1>The Michael Zone</h1>
+					<img id="dripping-blood" src="images/blood.gif" alt="Dripping blood">
+				</div>
+
 				<img src="images/right-skull.gif" alt="Skull opening it's mouth">
 			</div>
 			
 		</header>
 		
 		<main>
-			
+
+			<hr>
 			<img src="images/welcome-sign.gif" alt="Welcome to my website!">	
-			<p>Thanks to <em>NinjaKilla666</em> for helping me put this website together!</p>
-			<p><small>best viewed with netsearch 3.1</small></p>
-			<table>
+
+			<!--<p>Thanks to <em>NinjaKilla666</em> for helping me put this website together!</p>-->
+			<p><small>best viewed with netscape navigator</small></p>
+
+			<div id=table-wrapper> <!-- wrapper is for padding -->
+				<table id="about-me-table">
+					<tr>
+						<td><img src="images/blackfire.gif" alt="A purple flame"></td>
+						<td>
+							<h2>Learn About Me...</h2>
+							<p><small>if you dare!</small></p>
+						</td>
+						<td><img src="images/blackfire.gif" alt="A purple flame"></td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<ul class="skull-list">
+								<li>My name is Michael i'm 23 years old and this is <strong>a hub for all things Michael!</strong></li>
+								<li>I'm a fun loving person and am currently unemployed.</li>
+								<!-- gallery will be a link -->
+								<li>I have currently only witnessed four aliens (come see them in the gallery.)</li>
+							</ul>
+							<!-- guestbook will be a link -->
+							<p>
+								<img class="alien"src="images/alien2.png" alt="Incredibly scary Alien Lifeform">
+								Make sure to sign my guestbook!
+								<img class="alien"src="images/alien2.png" alt="Incredibly scary Alien Lifeform">
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<h3>Hobbies</h3>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<p>I spend most of my time either playing video games, watching movies or programing.</p>
+							
+							<p>Feel free to hop over to the gallery or my media page to learn more about me.</p>
+						</td>
+					</tr>
+				</table>
+			</div>
 				
-			</table>
-			
-			<h2>About me</h2>
-			<p>My name is Michael i'm 23 years old and this is a hub for all things Michael!</p>
-			<p>I'm a fun loving person and am currently unemployed. I have witnsseed 4 aliens</p>
-			<p>Make sure to sign my guestbook!</p>
-			<h3>Hobbies</h3>
-			<p>I spend most of my time either playing video games, watching movies or programing.</p>
-			<p>Feel free to hop over to the gallery or my media page to learn more about me.</p>
 			<h3>You can find me at:</h3>
 			<a href="https://github.com/michaelsmetsker2" title="My github">Github</a>
 			<a href="https://www.linkedin.com/in/michael-metsker-69403824b/" title="My Linkedin">Linkedin</a>
@@ -65,7 +105,6 @@
 			<a href="https://www.skydin.com" title="Visit Skydin.com to explore mystical tools and insights!">Explore the world of Skydin</a>
 			<a href="https://www.7-eleven.com/" title="Visit 7-eleven's website">Visit 7-eleven's website</a>
 		</main>
-		
 		
 		<footer>
 			<p>this will contain a live visitor counter (probably done after the class)</p>
@@ -87,8 +126,6 @@
 			<p>This will contain crappy midi conversions of songs, linkin park, limp bizkit and sonic music for example</p>
 			<h2>Guestbook</h2>
 			<p>Come sign your name on my guestbook!</p>
-			
-			
 			
 			
 			<p>funny pictures of stuff</p>

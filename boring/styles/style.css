@@ -1,0 +1,83 @@
+:root {
+    --veryLightGrey: #c5c5c5;
+    --lightGrey: #7c7c7c;
+    --darkGrey: #504d4d;
+    --almostBlack: #141414;
+    --darkBlue: #0f0162;
+    --hazyBlue: #1b0e65;
+}
+
+body {
+    font-size: 100%;
+    background-color: var(--lightGrey);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:link {
+    color: var(--hazyBlue);
+}
+a:hover {
+    color: var(--darkBlue);
+}
+a:visited {
+    color: var(--hazyBlue);
+}
+a:hover, a:focus {
+    color: var(--lightGrey);
+}
+
+header {
+    text-align: center;
+}
+
+section {
+    text-align: center;
+    margin-bottom: 5px;
+    margin: 0 auto;
+    width: 80%;
+    background-color: var(--darkGrey);
+}
+section img {
+    height: 150px;
+}
+
+/* adds a gep when two sections follow eachother */
+section + section {
+  margin-top: 2rem;
+}
+
+article {
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+    background-color: var(--veryLightGrey);
+}
+
+h1, h2{
+    margin-bottom: 0px;
+    color: var(--darkBlue);
+}
+
+hr {
+    width: 80%;
+}
+
+p {
+    color: var(--almostBlack);
+    font-size: 1em;
+    line-height: 1.1;
+    margin: 2px;
+    padding: 2px;
+}
+
+small {
+    font-size: .7em;
+}
+
+#office-building {
+    height: 300px;
+}
+
+.coming-soon {
+    color: var(--hazyBlue);
+}

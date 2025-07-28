@@ -1,83 +1,118 @@
+/* Michael Metsker, 7/18/2025, CS125H - lab 4 - css v2 */
+
+/* custom property */
 :root {
     --veryLightGrey: #c5c5c5;
     --lightGrey: #7c7c7c;
     --darkGrey: #504d4d;
-    --almostBlack: #141414;
+    --almostBlack: #101010;
     --darkBlue: #0f0162;
-    --hazyBlue: #1b0e65;
+    --hazyPurple: #271b78;
 }
-
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
     font-size: 100%;
     background-color: var(--lightGrey);
     font-family: Arial, Helvetica, sans-serif;
+    width: 70%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
+/* Generic anchor pseudo-classes */
 a:link {
-    color: var(--hazyBlue);
-}
-a:hover {
-    color: var(--darkBlue);
+    color: var(--lightGrey);
+    text-decoration: none;
 }
 a:visited {
-    color: var(--hazyBlue);
+    color: var(--hazyPurple);
 }
 a:hover, a:focus {
-    color: var(--lightGrey);
+    font-size: larger;
 }
 
+/* Plain element and combo plain element selectors go here */
+h1, h2{
+    text-align: center;
+}
+p {
+    font-size: 1.1em;
+    line-height: 1.3em;
+}
+hr {
+    width: 100%
+}
+/* Styles for header */
 header {
-    text-align: center;
+    padding: 2em;
 }
-
-section {
-    text-align: center;
-    margin-bottom: 5px;
+header h1 {
+    text-shadow: 1px 2px 1px white;
+    letter-spacing: 0.5em;
+    font-variant: small-caps;
+}
+header img {
+    height: 20em;
+    display: block;
     margin: 0 auto;
-    width: 80%;
+}
+section, nav {
+    box-shadow: 12px 7px 10px 4px var(--almostBlack);
+    border: 2px solid var(--almostBlack);
+    padding: .5em;
+    margin: 1em 0;
+}
+/* Styles for main */
+main {
+    color: var(--veryLightGrey);
+}
+/* Styles for sections nested in main */
+section {
     background-color: var(--darkGrey);
 }
+section h2 {
+    color:white;
+    text-shadow: -2px -2px var(--almostBlack);
+}
 section img {
-    height: 150px;
+    display: block;
+    margin: 1em auto;
+    height: 10em;
 }
-
-/* adds a gep when two sections follow eachother */
-section + section {
-  margin-top: 2rem;
-}
-
-article {
+section ul {
+    list-style-type: none;
     text-align: center;
-    margin: 0 auto;
-    width: 80%;
+    padding: 1em;
+}
+section ul li {
+    display: inline block;
+    margin-right: 1em;
+}
+section ul li:last-of-type {
+    font-size: 1.2em;
+}
+/*styles for nav nested in main */
+nav {
     background-color: var(--veryLightGrey);
-}
-
-h1, h2{
-    margin-bottom: 0px;
-    color: var(--darkBlue);
-}
-
-hr {
-    width: 80%;
-}
-
-p {
     color: var(--almostBlack);
-    font-size: 1em;
-    line-height: 1.1;
-    margin: 2px;
-    padding: 2px;
 }
-
-small {
+nav p {
+    text-align: center;
+}
+nav h3 {
+    display: inline;
+}
+nav a {
+    display: block;
+}
+nav span{
     font-size: .7em;
 }
-
-#office-building {
-    height: 300px;
-}
-
-.coming-soon {
-    color: var(--hazyBlue);
+/* syles for footer nested in main */
+footer p {
+    font-size: .8em;
+    text-align: center;
 }

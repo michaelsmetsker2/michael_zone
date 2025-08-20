@@ -139,6 +139,9 @@ article p a:link {
     color: var(--darkBlue);
     margin: .3em 0;
 }
+article h2 a{
+    color: black;
+}
 
 /* styles for the gallery page */
 section#gallery {

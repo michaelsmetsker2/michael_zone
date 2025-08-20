@@ -1,4 +1,4 @@
-/* Michael Metsker, 8/7/2025, CS125H - lab 6 - css v3 */
+/* Michael Metsker, 8/7/2025, CS125H - Final Term Project css */
 
 /* custom property */
 :root {
@@ -7,7 +7,6 @@
     --darkGrey: #504d4d;
     --almostBlack: #101010;
     --darkBlue: #0f0162;
-    --hazyPurple: #807396;
 }
 * {
   margin: 0;
@@ -24,11 +23,11 @@ body {
 
 /* Generic anchor pseudo-classes */
 a:link {
-    color: var(--darkBlue);
+    color: var(--veryLightGrey);
     text-decoration: none;
 }
 a:visited {
-    color: var(--hazyPurple);
+    color: var(--lightGrey);
 }
 a:hover, a:focus {
     font-size: larger;
@@ -47,13 +46,14 @@ p {
 hr {
     width: 100%
 }
+
 /* Styles for header */
 header {
     padding: 1em 0;
 }
 header h1 {
     text-shadow: 1px 2px 1px white;
-    letter-spacing: 0.5em;
+    letter-spacing: .5em;
     font-variant: small-caps;
 }
 header img {
@@ -61,11 +61,32 @@ header img {
     display: block;
     margin: 0 auto;
 }
-section, article {
+section, article, nav {
     box-shadow: 12px 7px 10px 4px var(--almostBlack);
     border: 2px solid var(--almostBlack);
-    padding: .1em;
+    padding: 1em;
     margin: 1em 0;
+}
+
+/* styles for the nav bar */
+nav ul {
+  	list-style: none;
+  	display: flex;
+    justify-content: center;
+}
+nav ul li {
+  	margin-right: 5em;
+}
+nav ul li:last-of-type {
+	margin-right: 0;
+}
+nav ul li a:link {
+  	color: #fff;
+  	font-weight: bold;
+  	transition: color 0.3s ease-in-out;
+}
+nav ul li a:visited {
+    color: black;
 }
 /* Styles for main */
 main {
@@ -83,6 +104,12 @@ section img {
     display: block;
     margin: 1em auto;
     height: 10em;
+}
+section h2 + img:last-of-type {
+    float:right;
+}
+section h3 {
+    clear: both;
 }
 section ul {
     list-style-type: none;
@@ -108,44 +135,43 @@ article h2 + p {
 article h3 ~ p {
     font-size: .7em;
 }
-article a {
+article p a:link {
+    color: var(--darkBlue);
     margin: .3em 0;
 }
-article h3:last-of-type {
-    margin-top: 1em;
-    text-align: center;
-}
-/* syles for footer sibling to main */
-footer {
-    margin-top: 1em;
-}
-footer p {
-    font-size: .8em;
-    text-align: center;
-}
 
-
-.gallery {
+/* styles for the gallery page */
+section#gallery {
     overflow: hidden;
 }
-
-.gallery figcaption {
-    padding-top: 1em;
-}
-
-.gallery article {
+#gallery article {
     float: left;
     width: 48%;
     margin: 1%;
     background-color: var(--veryLightGrey);
     box-sizing: border-box;
     box-shadow: 4px 4px 8px var(--almostBlack);
+    min-height: 20em;
+}
+#gallery figure{
+    width: 100%;
+}
+#gallery figure img {
+    width: 12em;
+    border: 2px solid var(--almostBlack);
+}
+#gallery figcaption {
+    padding-top: .3em;
+    font-size: .8em;
 }
 
-/* horizontal stretching is intentional */
-.gallery img {
-    float: left;
-    width: 65%;
-    margin-right: 1em;
-    border: 2px solid var(--almostBlack);
+/* syles for footer sibling to main */
+footer {
+    margin-top: 1em;
+    clear: left;
+}
+footer p {
+    color: White;
+    font-size: .8em;
+    text-align: center;
 }

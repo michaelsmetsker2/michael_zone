@@ -6,3 +6,4 @@ launch server on openrgb with defualt perameters and bamo you gots it workin
 (if your keyboard is device 0 and you have one that works like mine)
 
 there is currently no queueing or error handling but i will ad that i pinky promise
+edit: prolly not gonna happen. i'm lazy
